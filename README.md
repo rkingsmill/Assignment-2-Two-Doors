@@ -12,8 +12,6 @@ int main(int argc, const char * argv[]) {
     
     char play;
     int choice;
-  
-//Loop to repeat when play == 'y'
     
     //Intro
     
@@ -22,7 +20,7 @@ int main(int argc, const char * argv[]) {
     printf("Would you like to play? (y/n): ");
     scanf("%c", &play);
     
-    //When user decides to play
+    //When user decides to play with 'y'
     
     
     if (play == 'y')            {
@@ -52,12 +50,12 @@ int main(int argc, const char * argv[]) {
                 printf("%s", answer);
                 break;
                 
-        }//switch
+        }//switch bracket
         
-    }//if
+    }//if bracket
     
     
-    //When user doesn't want to play
+    //When user doesn't want to play with 'n'
     
     else if (play == 'n') {
         
@@ -67,13 +65,15 @@ int main(int argc, const char * argv[]) {
     }
     
     do {
+    
+        //for repeating after first time
         
         printf("Welcome to Two doors.\n");
         
         printf("Would you like to play? (y/n): ");
         scanf("%*c%c", &play);
         
-        //When user decides to play
+        //When user decides to play again with 'y'
         
         
         if (play == 'y')            {
@@ -103,10 +103,11 @@ int main(int argc, const char * argv[]) {
                     printf("%s", answer);
                     break;
                     
-            }//switch
+            }//switch bracket
             
-        }//if
+        }//if bracket
         
+        //when user wants to exist after playing
         else if (play == 'n') {
             printf("Goodbye\n");
             return 0;
